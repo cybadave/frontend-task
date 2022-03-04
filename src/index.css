@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+  height: 100%;
+}
+
+.checklist {
+  background: #364f6b; /* Our fictitious brand's primary colour */
+  color: #fce38a; /* Our fictitious brand's secondary colour */
+  padding: 32px;
+}
+
+/* The direct descendant selector is not ness - simply use descendant */
+/* element selectors should be avoided where possible */
+.checklist h1 {
+  font-size: 48px;
+}
+
+.checklist h2 {
+  font-size: 32px;
+}
+
+.checklist .checked {
+
+}
+/* Padding and margin-right do not produce a good result (checkboxes should be aligned on the right under each other
+ labels aligned to the left - have a look at using flexbox to acheive this layout)  */
+.checklist .checked span {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.checklist .buttons button {
+  color: black;
+  font-weight: bold;
+  /* This colour is surely a typo? */
+  background: #fc5185;
+  width: 5em;
+  padding: 8px;
+}
+
+.checklist .buttons input {
+  padding: 8px;
+  margin-right: 1em;
+}
+
+.checklist .buttons {
+  margin-top: 16px;
+}
+/* As projects grow, maintaining a global css file become exponentially harder, and we miss things like theme values in our button colours */
+/* TODO: Homework for the original author - re-implement these styles using styledComponents  */
